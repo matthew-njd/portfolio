@@ -93,20 +93,90 @@ a {
 .header-title {
   flex: 1;
   display: grid;
+  gap: 10px;
   align-content: center;
   justify-content: center;
 }
 
 #header-title-1 {
   font-size: 1.75em;
+  width: max-content;
+  padding: 5px 5px;
+  border-bottom: 3px solid var(--colour-two);
 }
 
 #header-title-2 {
-  font-size: 2.5em;
+  font-size: 2.6em;
+  width: max-content;
+  padding: 5px 5px;
+  border-bottom: 3px solid var(--colour-one);
 }
 
 #header-title-3 {
-  font-size: 1em;
+  font-size: 1.25em;
+  width: max-content;
+  padding: 5px 5px;
+  border-bottom: 3px solid var(--colour-five);
+}
+
+/* Header title 1 animation*/
+#header-title-1 {
+  position: relative;
+}
+
+#header-title-1::before,
+#header-title-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+}
+
+#header-title-1::before {
+  background-color: var(--colour-two);
+  animation: reveal 2s ease forwards;
+}
+
+/* Header title 2 animation*/
+#header-title-2 {
+  position: relative;
+}
+
+#header-title-2::before,
+#header-title-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+}
+
+#header-title-2::before {
+  background-color: var(--colour-one);
+  animation: reveal 2.5s ease 3s forwards;
+}
+
+/* Header title 3 animation*/
+#header-title-3 {
+  position: relative;
+}
+
+#header-title-3::before,
+#header-title-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+}
+
+#header-title-3::before {
+  background-color: var(--colour-five);
+  animation: reveal 2.5s ease 5.5s forwards;
 }
 
 /* Work */
@@ -138,15 +208,12 @@ a {
   color: var(--light-colour);
 }
 
-/*Typewrite effect*/
-.header-title h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 5px solid var(--colour-six); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
 /* Animations*/
+@keyframes reveal {
+  to {
+    left: 100%;
+  }
+}
 
 /* The typing effect */
 @keyframes typing {
