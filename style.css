@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+:root {
+  --light-colour: #f2f2f2;
+  --dark-colour: #1e1e1e;
+  --colour-one: #c7bee6;
+  --colour-two: #f6e5a2;
+  --colour-three: #90d0b6;
+  --colour-four: #89bbe0;
+  --colour-five: #f59597;
+  --colour-six: #fbbe7d;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/* General */
+
+html {
+  box-sizing: border-box;
+  color: var(--light-colour);
+}
+
+body {
+  background-color: var(--dark-colour);
+  line-height: 1.6;
+  background-image: url(/images/chalkboard.jpg);
+  font-family: "Play", sans-serif;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 0;
+  margin: 50px auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Header */
+
+.navbar {
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar.sticky {
+  width: 70%;
+  position: fixed;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links.side {
+  display: grid;
+  gap: 25px;
+}
+
+.nav-links a {
+  padding: 0 25px;
+  color: var(--light-colour);
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+#header-title-1 {
+  font-size: 1.75em;
+}
+
+#header-title-2 {
+  font-size: 2.5em;
+}
+
+#header-title-3 {
+  font-size: 1em;
+}
+
+/* Work */
+.work {
+  display: grid;
+  height: 600px;
+  font-size: 1.5em;
+}
+
+/* About */
+.about {
+  display: grid;
+  height: 600px;
+  font-size: 1.5em;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.social a {
+  padding: 0 25px;
+  color: var(--light-colour);
+}
