@@ -52,7 +52,8 @@ body {
 }
 
 .navbar.sticky {
-  width: 70%;
+  width: fit-content;
+  left: 20%;
   position: fixed;
 }
 
@@ -182,13 +183,14 @@ a {
 /* Work */
 .work {
   display: grid;
+  grid-template-rows: 10% 30% 60%;
   height: 600px;
   padding: 0 15px;
   font-size: 1.5em;
   border-left: 5px solid var(--colour-four);
 }
 
-.about__btn-container {
+.work__btn-container {
   display: grid;
   gap: 50px;
   align-content: center;
@@ -212,7 +214,7 @@ a {
   position: relative;
 }
 
-.about__tab--active::before {
+.work__tab--active::before {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -246,14 +248,18 @@ a {
 }
 */
 
-.about__content {
+.work__header {
+  font-size: 1.5em;
+}
+
+.work__content {
   display: none;
 }
 
-.about__content--active {
-  display: flex;
-  align-content: center;
-  justify-content: center;
+.work__content--active {
+  display: grid;
+  gap: 30px;
+  grid-template-rows: 15% auto;
 }
 
 /* About */

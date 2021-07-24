@@ -24,20 +24,20 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 // Tabbed component
-const tabs = document.querySelectorAll(".about__tab");
-const tabsContainer = document.querySelector(".about__btn-container");
-const tabsContent = document.querySelectorAll(".about__content");
+const tabs = document.querySelectorAll(".work__tab");
+const tabsContainer = document.querySelector(".work__btn-container");
+const tabsContent = document.querySelectorAll(".work__content");
 
 tabsContainer.addEventListener("click", function (e) {
-  const clicked = e.target.closest(".about__tab");
+  const clicked = e.target.closest(".work__tab");
 
   if (!clicked) return;
 
-  tabs.forEach((t) => t.classList.remove("about__tab--active"));
-  tabsContent.forEach((c) => c.classList.remove("about__content--active"));
+  tabs.forEach((t) => t.classList.remove("work__tab--active"));
+  tabsContent.forEach((c) => c.classList.remove("work__content--active"));
 
-  clicked.classList.add("about__tab--active");
+  clicked.classList.add("work__tab--active");
   document
-    .querySelector(`.about__content--${clicked.dataset.tab}`)
-    .classList.add("about__content--active");
+    .querySelector(`.work__content--${clicked.dataset.tab}`)
+    .classList.add("work__content--active");
 });
