@@ -188,7 +188,7 @@ a {
   border-left: 5px solid var(--colour-four);
 }
 
-.about__btn {
+.about__btn-container {
   display: grid;
   gap: 50px;
   align-content: center;
@@ -212,7 +212,7 @@ a {
   position: relative;
 }
 
-.btn::before {
+.about__tab--active::before {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -226,6 +226,7 @@ a {
   filter: blur(1em);
 }
 
+/*
 .btn::after {
   content: "";
   position: absolute;
@@ -236,7 +237,6 @@ a {
   box-shadow: 0 0 0.5em 0.25em var(--light-colour);
 }
 
-/*
 .btn:hover,
 .btn:focus {
   color: var(--colour-five);
@@ -245,6 +245,16 @@ a {
   box-shadow: inset 0 0 1em 0 var(--colour-five), 0 0 1em 0 var(--colour-five);
 }
 */
+
+.about__content {
+  display: none;
+}
+
+.about__content--active {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 
 /* About */
 .about {

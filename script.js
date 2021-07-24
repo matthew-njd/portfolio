@@ -4,10 +4,6 @@ const section1 = document.querySelector("#section-1");
 const nav = document.querySelector(".navbar");
 const navLinks = document.querySelector(".nav-links");
 
-let textOne = document.getElementById("header-title-1").textContent;
-let textTwo = document.getElementById("header-title-2").textContent;
-let textThree = document.getElementById("header-title-3").textContent;
-
 // Show Navbar
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
@@ -26,3 +22,22 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight * 4}px`,
 });
 headerObserver.observe(header);
+
+// Tabbed component
+const tabs = document.querySelectorAll(".about__tab");
+const tabsContainer = document.querySelector(".about__btn-container");
+const tabsContent = document.querySelectorAll(".about__content");
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".about__tab");
+
+  if (!clicked) return;
+
+  tabs.forEach((t) => t.classList.remove("about__tab--active"));
+  tabsContent.forEach((c) => c.classList.remove("about__content--active"));
+
+  clicked.classList.add("about__tab--active");
+  document
+    .querySelector(`.about__content--${clicked.dataset.tab}`)
+    .classList.add("about__content--active");
+});
