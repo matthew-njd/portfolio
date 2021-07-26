@@ -38,7 +38,7 @@ body {
 }
 
 .card {
-  background-color: var(--dark-colour);
+  background-color: #282828;
   border-radius: 10px;
 }
 
@@ -94,6 +94,7 @@ h2 {
 .nav-links a:hover {
   padding-bottom: 15px;
   border-bottom: 2px solid var(--light-colour);
+  cursor: pointer;
 }
 
 ul {
@@ -296,12 +297,36 @@ a {
 
 .social a {
   font-size: 1.25em;
-  padding: 25px;
-  color: var(--light-colour);
+}
+
+i {
+  border-radius: 50%;
+  padding: 30px;
+  color: wheat;
 }
 
 i:hover {
   animation: moveUp 500ms ease forwards;
+}
+
+.social .ig:hover {
+  background-color: #e1306c;
+  transition: 0.75s linear;
+}
+
+.social .tw:hover {
+  background-color: #46c1f6;
+  transition: 0.75s linear;
+}
+
+.social .li:hover {
+  background-color: #0a66c2;
+  transition: 0.75s linear;
+}
+
+.social .gh:hover {
+  background-color: #333333;
+  transition: 0.75s linear;
 }
 
 /* --------------------------------------------------- Animations --------------------------------------------------- */
@@ -326,5 +351,14 @@ i:hover {
   }
   to {
     transform: translateY(-15px);
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    left: 0;
+  }
+  to {
+    right: 100%;
   }
 }
