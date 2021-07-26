@@ -41,3 +41,24 @@ tabsContainer.addEventListener("click", function (e) {
     .querySelector(`.work__content--${clicked.dataset.tab}`)
     .classList.add("work__content--active");
 });
+
+// Reveal section
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section-hidden");
+});

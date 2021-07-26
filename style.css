@@ -49,6 +49,15 @@ body {
   height: 100%;
 }
 
+.section {
+  transition: transform 1.5s, opacity 2s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -64,6 +73,7 @@ h2 {
   width: fit-content;
   left: 15%;
   position: fixed;
+  animation: appear 1.5s ease;
 }
 
 .nav-links {
@@ -286,5 +296,14 @@ a {
 @keyframes reveal {
   to {
     left: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
