@@ -73,7 +73,7 @@ h2 {
   width: fit-content;
   left: 15%;
   position: fixed;
-  animation: appear 1.5s ease;
+  animation: appear 1.5s;
 }
 
 .nav-links {
@@ -89,6 +89,11 @@ h2 {
   padding: 0 25px;
   color: var(--light-colour);
   font-size: 20px;
+}
+
+.nav-links a:hover {
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--light-colour);
 }
 
 ul {
@@ -287,9 +292,13 @@ a {
   align-items: center;
 }
 
-.social a {
-  padding: 0 25px;
+i {
+  padding: 25px;
   color: var(--light-colour);
+}
+
+i:hover {
+  animation: moveUp 500ms ease forwards;
 }
 
 /* --------------------------------------------------- Animations --------------------------------------------------- */
@@ -305,5 +314,14 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
   }
 }
