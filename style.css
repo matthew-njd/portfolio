@@ -206,6 +206,7 @@ a {
   grid-template-rows: 10% 30% 60%;
   height: 600px;
   padding: 0 15px;
+  margin-bottom: 100px;
   font-size: 1.5em;
   border: 3px solid var(--colour-four);
   box-shadow: 0 0 20px var(--colour-four);
@@ -224,18 +225,18 @@ a {
   margin-bottom: 30px;
   font-size: 1.75rem;
   cursor: pointer;
-  color: var(--colour-four);
-  border: var(--colour-four) 0.125em solid;
+  color: var(--light-colour);
+  border: var(--light-colour) 0.125em solid;
   background-color: var(--dark-colour);
   border-radius: 0.25em;
   text-decoration: none;
-  text-shadow: 0 0 0.5em var(--colour-four);
-  box-shadow: inset 0 0 0.5em 0 var(--colour-four),
-    0 0 0.5em 0 var(--colour-four);
+  box-shadow: inset 0 0 0.5em 0 var(--light-colour),
+    0 0 0.5em 0 var(--light-colour);
   position: relative;
 }
 
 .work__tab--active {
+  color: var(--colour-four);
   border: var(--colour-four) 0.125em solid;
   text-shadow: 0 0 0.75em var(--colour-four);
   box-shadow: inset 0 0 1em 0 var(--colour-four), 0 0 1em 0 var(--colour-four);
@@ -281,6 +282,7 @@ a {
   display: grid;
   height: 600px;
   padding: 0 15px;
+  margin-top: 100px;
   font-size: 1.5em;
   border: 3px solid var(--colour-three);
   box-shadow: 0 0 20px var(--colour-three);
@@ -292,7 +294,8 @@ a {
   align-items: center;
 }
 
-i {
+.social a {
+  font-size: 1.25em;
   padding: 25px;
   color: var(--light-colour);
 }
