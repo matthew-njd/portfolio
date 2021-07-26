@@ -37,11 +37,20 @@ body {
   margin: 50px auto;
 }
 
+.card {
+  background-color: var(--dark-colour);
+  border-radius: 10px;
+}
+
 .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 /* --------------------------------------------------- Header Section --------------------------------------------------- */
@@ -183,7 +192,8 @@ a {
   height: 600px;
   padding: 0 15px;
   font-size: 1.5em;
-  border-left: 5px solid var(--colour-four);
+  border: 3px solid var(--colour-four);
+  box-shadow: 0 0 20px var(--colour-four);
 }
 
 .work__btn-container {
@@ -201,7 +211,7 @@ a {
   cursor: pointer;
   color: var(--colour-four);
   border: var(--colour-four) 0.125em solid;
-  background-image: url(/images/chalkboard.jpg);
+  background-color: var(--dark-colour);
   border-radius: 0.25em;
   text-decoration: none;
   text-shadow: 0 0 0.5em var(--colour-four);
@@ -257,7 +267,8 @@ a {
   height: 600px;
   padding: 0 15px;
   font-size: 1.5em;
-  border-left: 5px solid var(--colour-three);
+  border: 3px solid var(--colour-three);
+  box-shadow: 0 0 20px var(--colour-three);
 }
 
 /* --------------------------------------------------- Footer --------------------------------------------------- */
@@ -275,26 +286,5 @@ a {
 @keyframes reveal {
   to {
     left: 100%;
-  }
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--colour-six);
   }
 }
