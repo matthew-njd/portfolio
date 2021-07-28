@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
 
 :root {
-  --light-colour: #f2f2f2;
+  --light-colour: wheat;
   --dark-colour: #1e1e1e;
+  --grey-colour: #636363;
   --colour-one: #c7bee6;
-  --colour-two: #f6e5a2;
+  --colour-two: #fbbe7d;
   --colour-three: #90d0b6;
   --colour-four: #89bbe0;
   --colour-five: #f59597;
-  --colour-six: #fbbe7d;
 }
 
 * {
@@ -204,8 +204,8 @@ a {
 /* --------------------------------------------------- Work Section --------------------------------------------------- */
 .work {
   display: grid;
-  grid-template-rows: 10% 30% 60%;
-  height: 50vh;
+  grid-template-rows: 20% 20% 60%;
+  height: 600px;
   padding: 0 15px;
   padding-bottom: 25px;
   margin-bottom: 100px;
@@ -234,36 +234,24 @@ h5 {
   color: var(--light-colour);
   border: var(--light-colour) 0.125em solid;
   background-color: var(--dark-colour);
-  border-radius: 2em;
+  border-radius: 0.5em;
+  box-shadow: 8px 8px 0px var(--grey-colour);
   text-decoration: none;
   position: relative;
 }
 
 .work__tab--active {
-  border: grey 0.125em solid;
-  text-shadow: 0 0 0.75em grey;
-  box-shadow: inset 0 0 1em 0 grey, 0 0 1em 0 grey;
-}
-
-.work__tab--active::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  background: grey;
-  top: 120%;
-  left: 0;
-  width: 90%;
-  height: 100%;
-
-  transform: perspective(1.5em) rotateX(40deg) scale(1.25, 0.45);
-  filter: blur(1.75em);
+  color: var(--dark-colour);
+  background-color: var(--light-colour);
+  border: var(--dark-colour) 0.125em solid;
+  animation: moveUp 500ms ease forwards;
 }
 
 .btn:hover,
 .btn:focus {
-  border: grey 0.125em solid;
-  text-shadow: 0 0 0.75em grey;
-  box-shadow: inset 0 0 1em 0 grey, 0 0 1em 0 grey;
+  color: var(--dark-colour);
+  background-color: var(--light-colour);
+  border: var(--dark-colour) 0.125em solid;
 }
 
 .work__header {
@@ -301,8 +289,13 @@ h5 {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 5px 5px 8px grey;
+  box-shadow: 0px 0px 15px var(--dark-colour);
   border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--dark-colour),
+    var(--grey-colour)
+  );
 }
 
 .card-content {
@@ -391,7 +384,7 @@ h5 {
 .footer i {
   border-radius: 50%;
   padding: 30px;
-  color: wheat;
+  color: var(--light-colour);
 }
 
 .footer i:hover {
@@ -439,7 +432,7 @@ h5 {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
 }
 
