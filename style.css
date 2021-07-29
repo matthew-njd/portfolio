@@ -62,7 +62,7 @@ h2 {
   font-size: 3rem;
 }
 
-/* --------------------------------------------------- Header Section --------------------------------------------------- */
+/* --------------------------------------------------- Nav Section --------------------------------------------------- */
 
 .navbar {
   align-items: center;
@@ -71,13 +71,17 @@ h2 {
 
 .navbar.sticky {
   width: fit-content;
-  left: 15%;
+  left: 10%;
   position: fixed;
-  animation: appear 1.5s;
+  animation: appear 1s;
 }
 
 .nav-links {
   display: flex;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .nav-links.side {
@@ -89,21 +93,41 @@ h2 {
   padding: 0 25px;
   color: var(--light-colour);
   font-size: 20px;
+  text-decoration: none;
 }
 
-.nav-links a:hover {
+nav.navbar ul li a {
+  position: relative;
+}
+
+nav.navbar ul li a:hover {
   padding-bottom: 15px;
-  border-bottom: 2px solid var(--light-colour);
   cursor: pointer;
 }
 
-ul {
-  list-style-type: none;
+nav.navbar ul li a:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  height: 1px;
+  background: var(--light-colour);
 }
 
-a {
-  text-decoration: none;
+nav.navbar ul li a:hover:after {
+  width: 75%;
 }
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+/* --------------------------------------------------- Header Section --------------------------------------------------- */
 
 .header {
   height: 100vh;
