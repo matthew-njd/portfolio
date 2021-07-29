@@ -319,12 +319,16 @@ h5 {
 
 .card-back {
   border-radius: 10px;
-  top: 30%;
+  top: 20%;
   transform: rotateY(180deg);
 }
 
 .card-back a {
-  color: white;
+  color: var(--light-colour);
+}
+
+.card-back a:hover {
+  border-bottom: 3px solid var(--light-colour);
 }
 
 .card-pic {
@@ -354,8 +358,8 @@ h5 {
 /* --------------------------------------------------- About Section --------------------------------------------------- */
 .about {
   display: grid;
-  grid-template-rows: 20% auto;
-  height: 50vh;
+  grid-template-rows: 15% auto;
+  height: 600px;
   padding: 0 15px;
   margin-top: 100px;
   font-size: 1.5em;
@@ -442,5 +446,14 @@ h5 {
   }
   to {
     right: 100%;
+  }
+}
+
+@keyframes scale {
+  from {
+    font-size: 1em;
+  }
+  to {
+    transform: 2em;
   }
 }
