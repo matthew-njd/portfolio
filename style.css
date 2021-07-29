@@ -63,30 +63,33 @@ h2 {
 }
 
 /* --------------------------------------------------- Nav Section --------------------------------------------------- */
-
 .navbar {
-  align-items: center;
+  display: flex;
+  justify-content: center;
   z-index: 100;
 }
 
 .navbar.sticky {
-  width: fit-content;
-  left: 10%;
   position: fixed;
   animation: appear 1s;
+  right: 10%;
+}
+
+.nav-links.side {
+  display: grid;
+  gap: 25px;
 }
 
 .nav-links {
   display: flex;
 }
 
-ul {
-  list-style-type: none;
+.i-nav {
+  padding-right: 10px;
 }
 
-.nav-links.side {
-  display: grid;
-  gap: 25px;
+ul {
+  list-style-type: none;
 }
 
 .nav-links a {
@@ -101,7 +104,7 @@ nav.navbar ul li a {
 }
 
 nav.navbar ul li a:hover {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 
@@ -228,7 +231,7 @@ nav ul li a:before {
 /* --------------------------------------------------- Work Section --------------------------------------------------- */
 .work {
   display: grid;
-  grid-template-rows: 20% 20% 60%;
+  grid-template-rows: 15% 20% 65%;
   height: 600px;
   padding: 0 15px;
   padding-bottom: 25px;
@@ -252,7 +255,6 @@ h5 {
 
 .btn {
   padding: 0.5em 1em;
-  margin-bottom: 30px;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--light-colour);
