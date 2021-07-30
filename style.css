@@ -508,7 +508,101 @@ h5 {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 800px) and (min-width: 600px) {
+  /* general */
+  .container {
+    width: auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  /* nav */
+  .nav-links.side {
+    display: none;
+  }
+
+  /* header */
+  #header-title-1 {
+    font-size: 2em;
+  }
+
+  #header-title-2 {
+    font-size: 1.5em;
+  }
+
+  #header-title-3 {
+    font-size: 1.25em;
+  }
+
+  /* work */
+  .work {
+    display: grid;
+    grid-template-rows: 5% 8% auto;
+    gap: 20px;
+    padding: 10px 15px;
+    font-size: 1.25em;
+    height: 1200px;
+  }
+
+  .work__header {
+    font-size: 1.2em;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .work__btn-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 30px;
+  }
+
+  .work__content--active {
+    display: grid;
+    grid-template-rows: 5% auto;
+    gap: 0;
+  }
+
+  .work__content .cards-3d {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+  }
+
+  .work__content .cards {
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center;
+  }
+
+  /* about */
+  .about {
+    display: grid;
+    grid-template-rows: 10% auto;
+    gap: 10px;
+    height: auto;
+    padding: 10px 15px;
+    font-size: 1.5em;
+  }
+
+  /* social/footer */
+  .social a {
+    font-size: 1em;
+  }
+
+  .footer {
+    height: 100px;
+  }
+
+  .footer i {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 360px) {
   /* general */
   .container {
     width: auto;
@@ -545,12 +639,14 @@ h5 {
     display: grid;
     grid-template-rows: 5% 20% auto;
     gap: 20px;
+    padding: 10px 15px;
     font-size: 1.25em;
     height: 1200px;
   }
 
   .work__header {
     font-size: 1em;
+    height: 100px;
   }
 
   .btn {
@@ -565,6 +661,7 @@ h5 {
 
   .work__content--active {
     display: grid;
+    grid-template-rows: 10% auto;
     gap: 0;
     flex-direction: column;
   }
@@ -587,6 +684,7 @@ h5 {
     grid-template-rows: 5% auto;
     gap: 10px;
     height: auto;
+    padding: 10px 15px;
     font-size: 1.25em;
   }
 
