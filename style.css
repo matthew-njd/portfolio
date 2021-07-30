@@ -72,7 +72,7 @@ h2 {
 .navbar.sticky {
   position: fixed;
   animation: appear 1s;
-  right: 10%;
+  right: 8%;
 }
 
 .nav-links.side {
